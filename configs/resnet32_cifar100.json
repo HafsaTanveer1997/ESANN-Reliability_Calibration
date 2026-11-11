@@ -1,0 +1,362 @@
+{
+  "candidate_id": "resnet32_cifar100_trial_23",
+  "split": "reliability_calibration/cifar100_experiment_split_seed42.json",
+  "split_sha256": "8523c6561e05289e23d99d370287238c55fb164b97eaa74884fe58a9101fd0d4",
+  "source_protocol_sha256": "aad45eb3247fdce416e46b0b809fba9d4afea77c89fcaff62b6a24b63f3e86f3",
+  "correction_settings": {
+    "anchor": true,
+    "hinge": "hard",
+    "k": 2,
+    "lam_b": 10.0,
+    "lam_g": 10.0,
+    "lam_r": 10.0,
+    "learn_scales": true,
+    "link_mode": "hard",
+    "max_iter": 2000,
+    "min_support": 1.0,
+    "tau": 0.6
+  },
+  "accuracy_drop_limit": 0.005,
+  "repeat": [
+    {
+      "analysis_roles": [
+        "temperature_baseline"
+      ],
+      "candidate_id": "resnet32_cifar100_trial_23",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "development_export": "artifacts/calibration_inputs/resnet32_cifar100_trial_23/random/seed_1.npz",
+      "selection_seed": 1,
+      "selector": "random",
+      "development_export_sha256": "fb6c95a56c8233f5260f2aedc7090268c9dc89de8c01a74cd3f5231aef532754"
+    },
+    {
+      "analysis_roles": [
+        "frozen_selected"
+      ],
+      "candidate_id": "resnet32_cifar100_trial_23",
+      "configuration": {
+        "alpha": 1.0,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": true,
+        "name": "full_lambda10_alpha1",
+        "temperature_only": false
+      },
+      "development_export": "artifacts/calibration_inputs/resnet32_cifar100_trial_23/random/seed_1.npz",
+      "selection_seed": 1,
+      "selector": "random",
+      "development_export_sha256": "fb6c95a56c8233f5260f2aedc7090268c9dc89de8c01a74cd3f5231aef532754"
+    },
+    {
+      "analysis_roles": [
+        "temperature_baseline"
+      ],
+      "candidate_id": "resnet32_cifar100_trial_23",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "development_export": "artifacts/calibration_inputs/resnet32_cifar100_trial_23/random/seed_2.npz",
+      "selection_seed": 2,
+      "selector": "random",
+      "development_export_sha256": "4b2cdafc73c0037225b53c08c5c8781be44a299ca5fd9dfa7b5d7378cf47dd7e"
+    },
+    {
+      "analysis_roles": [
+        "frozen_selected"
+      ],
+      "candidate_id": "resnet32_cifar100_trial_23",
+      "configuration": {
+        "alpha": 1.0,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": true,
+        "name": "full_lambda10_alpha1",
+        "temperature_only": false
+      },
+      "development_export": "artifacts/calibration_inputs/resnet32_cifar100_trial_23/random/seed_2.npz",
+      "selection_seed": 2,
+      "selector": "random",
+      "development_export_sha256": "4b2cdafc73c0037225b53c08c5c8781be44a299ca5fd9dfa7b5d7378cf47dd7e"
+    },
+    {
+      "analysis_roles": [
+        "temperature_baseline"
+      ],
+      "candidate_id": "resnet32_cifar100_trial_23",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "development_export": "artifacts/calibration_inputs/resnet32_cifar100_trial_23/random/seed_3.npz",
+      "selection_seed": 3,
+      "selector": "random",
+      "development_export_sha256": "1ffe720e1a1c11a325843dbde0f55574c2921fe0faad1062d74b720209102640"
+    },
+    {
+      "analysis_roles": [
+        "frozen_selected"
+      ],
+      "candidate_id": "resnet32_cifar100_trial_23",
+      "configuration": {
+        "alpha": 1.0,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": true,
+        "name": "full_lambda10_alpha1",
+        "temperature_only": false
+      },
+      "development_export": "artifacts/calibration_inputs/resnet32_cifar100_trial_23/random/seed_3.npz",
+      "selection_seed": 3,
+      "selector": "random",
+      "development_export_sha256": "1ffe720e1a1c11a325843dbde0f55574c2921fe0faad1062d74b720209102640"
+    },
+    {
+      "analysis_roles": [
+        "temperature_baseline"
+      ],
+      "candidate_id": "resnet32_cifar100_trial_23",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "development_export": "artifacts/calibration_inputs/resnet32_cifar100_trial_23/random/seed_4.npz",
+      "selection_seed": 4,
+      "selector": "random",
+      "development_export_sha256": "180b47471288957104c37350b9fee8807c6952d619fb21dbdc6b33b650cf22b5"
+    },
+    {
+      "analysis_roles": [
+        "frozen_selected"
+      ],
+      "candidate_id": "resnet32_cifar100_trial_23",
+      "configuration": {
+        "alpha": 1.0,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": true,
+        "name": "full_lambda10_alpha1",
+        "temperature_only": false
+      },
+      "development_export": "artifacts/calibration_inputs/resnet32_cifar100_trial_23/random/seed_4.npz",
+      "selection_seed": 4,
+      "selector": "random",
+      "development_export_sha256": "180b47471288957104c37350b9fee8807c6952d619fb21dbdc6b33b650cf22b5"
+    },
+    {
+      "analysis_roles": [
+        "temperature_baseline"
+      ],
+      "candidate_id": "resnet32_cifar100_trial_23",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "development_export": "artifacts/calibration_inputs/resnet32_cifar100_trial_23/random/seed_5.npz",
+      "selection_seed": 5,
+      "selector": "random",
+      "development_export_sha256": "b7c562527db9482b7d0327c01628fcb1f71273e6892dcc1d88f7ec114cf69e7f"
+    },
+    {
+      "analysis_roles": [
+        "frozen_selected"
+      ],
+      "candidate_id": "resnet32_cifar100_trial_23",
+      "configuration": {
+        "alpha": 1.0,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": true,
+        "name": "full_lambda10_alpha1",
+        "temperature_only": false
+      },
+      "development_export": "artifacts/calibration_inputs/resnet32_cifar100_trial_23/random/seed_5.npz",
+      "selection_seed": 5,
+      "selector": "random",
+      "development_export_sha256": "b7c562527db9482b7d0327c01628fcb1f71273e6892dcc1d88f7ec114cf69e7f"
+    },
+    {
+      "analysis_roles": [
+        "temperature_baseline"
+      ],
+      "candidate_id": "resnet32_cifar100_trial_23",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "development_export": "artifacts/calibration_inputs/resnet32_cifar100_trial_23/random/seed_6.npz",
+      "selection_seed": 6,
+      "selector": "random",
+      "development_export_sha256": "53990fe26d805c712e2dc17575bab855e5b570afbcf565bb0aa099c4af9ce919"
+    },
+    {
+      "analysis_roles": [
+        "frozen_selected"
+      ],
+      "candidate_id": "resnet32_cifar100_trial_23",
+      "configuration": {
+        "alpha": 1.0,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": true,
+        "name": "full_lambda10_alpha1",
+        "temperature_only": false
+      },
+      "development_export": "artifacts/calibration_inputs/resnet32_cifar100_trial_23/random/seed_6.npz",
+      "selection_seed": 6,
+      "selector": "random",
+      "development_export_sha256": "53990fe26d805c712e2dc17575bab855e5b570afbcf565bb0aa099c4af9ce919"
+    },
+    {
+      "analysis_roles": [
+        "temperature_baseline"
+      ],
+      "candidate_id": "resnet32_cifar100_trial_23",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "development_export": "artifacts/calibration_inputs/resnet32_cifar100_trial_23/random/seed_7.npz",
+      "selection_seed": 7,
+      "selector": "random",
+      "development_export_sha256": "6893afb485dfbb51e85a66faa3a1286dbfdae34e9d7f04f527837fc7aabe2471"
+    },
+    {
+      "analysis_roles": [
+        "frozen_selected"
+      ],
+      "candidate_id": "resnet32_cifar100_trial_23",
+      "configuration": {
+        "alpha": 1.0,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": true,
+        "name": "full_lambda10_alpha1",
+        "temperature_only": false
+      },
+      "development_export": "artifacts/calibration_inputs/resnet32_cifar100_trial_23/random/seed_7.npz",
+      "selection_seed": 7,
+      "selector": "random",
+      "development_export_sha256": "6893afb485dfbb51e85a66faa3a1286dbfdae34e9d7f04f527837fc7aabe2471"
+    },
+    {
+      "analysis_roles": [
+        "temperature_baseline"
+      ],
+      "candidate_id": "resnet32_cifar100_trial_23",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "development_export": "artifacts/calibration_inputs/resnet32_cifar100_trial_23/random/seed_8.npz",
+      "selection_seed": 8,
+      "selector": "random",
+      "development_export_sha256": "ef738d091a5c050d9386020dd698f10a2dda9b3259e27d5d0abefec23330a318"
+    },
+    {
+      "analysis_roles": [
+        "frozen_selected"
+      ],
+      "candidate_id": "resnet32_cifar100_trial_23",
+      "configuration": {
+        "alpha": 1.0,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": true,
+        "name": "full_lambda10_alpha1",
+        "temperature_only": false
+      },
+      "development_export": "artifacts/calibration_inputs/resnet32_cifar100_trial_23/random/seed_8.npz",
+      "selection_seed": 8,
+      "selector": "random",
+      "development_export_sha256": "ef738d091a5c050d9386020dd698f10a2dda9b3259e27d5d0abefec23330a318"
+    },
+    {
+      "analysis_roles": [
+        "temperature_baseline"
+      ],
+      "candidate_id": "resnet32_cifar100_trial_23",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "development_export": "artifacts/calibration_inputs/resnet32_cifar100_trial_23/random/seed_9.npz",
+      "selection_seed": 9,
+      "selector": "random",
+      "development_export_sha256": "bd660359d31abb2ac50e40160d56a35e7827bc2736d8c93bd701256e97efc89a"
+    },
+    {
+      "analysis_roles": [
+        "frozen_selected"
+      ],
+      "candidate_id": "resnet32_cifar100_trial_23",
+      "configuration": {
+        "alpha": 1.0,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": true,
+        "name": "full_lambda10_alpha1",
+        "temperature_only": false
+      },
+      "development_export": "artifacts/calibration_inputs/resnet32_cifar100_trial_23/random/seed_9.npz",
+      "selection_seed": 9,
+      "selector": "random",
+      "development_export_sha256": "bd660359d31abb2ac50e40160d56a35e7827bc2736d8c93bd701256e97efc89a"
+    },
+    {
+      "analysis_roles": [
+        "temperature_baseline"
+      ],
+      "candidate_id": "resnet32_cifar100_trial_23",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "development_export": "artifacts/calibration_inputs/resnet32_cifar100_trial_23/random/seed_10.npz",
+      "selection_seed": 10,
+      "selector": "random",
+      "development_export_sha256": "0f107c124555b55140e9a363fc2cbda4af9b79bdf38c4659de3f0879fc92bfc1"
+    },
+    {
+      "analysis_roles": [
+        "frozen_selected"
+      ],
+      "candidate_id": "resnet32_cifar100_trial_23",
+      "configuration": {
+        "alpha": 1.0,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": true,
+        "name": "full_lambda10_alpha1",
+        "temperature_only": false
+      },
+      "development_export": "artifacts/calibration_inputs/resnet32_cifar100_trial_23/random/seed_10.npz",
+      "selection_seed": 10,
+      "selector": "random",
+      "development_export_sha256": "0f107c124555b55140e9a363fc2cbda4af9b79bdf38c4659de3f0879fc92bfc1"
+    }
+  ]
+}

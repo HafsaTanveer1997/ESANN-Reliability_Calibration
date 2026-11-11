@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "purpose": "Reproduce the historical primary-model calibration setting",
+  "candidate_id": "mobilenet_v2_cifar100_trial_26",
+  "dataset": "cifar100",
+  "num_classes": 100,
+  "selector": "random",
+  "selection_seed": 42,
+  "repeated_fitting_seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "reselection_allowed": false,
+  "correction_settings": {
+    "anchor": true,
+    "hinge": "hard",
+    "k": 2,
+    "lam_b": 10.0,
+    "lam_g": 10.0,
+    "lam_r": 10.0,
+    "learn_scales": true,
+    "link_mode": "hard",
+    "max_iter": 2000,
+    "min_support": 1.0,
+    "tau": 0.6
+  },
+  "development_configurations": [
+    {
+      "name": "temperature",
+      "temperature_only": true
+    },
+    {
+      "name": "scales_bias_lambda10_alpha0",
+      "temperature_only": false,
+      "anchor": true,
+      "learn_scales": true,
+      "learn_bias": true,
+      "learn_residual": false,
+      "lam_g": 10.0,
+      "lam_b": 10.0,
+      "lam_r": 10.0,
+      "alpha": 0.0
+    },
+    {
+      "name": "scales_bias_lambda10_alpha1",
+      "temperature_only": false,
+      "anchor": true,
+      "learn_scales": true,
+      "learn_bias": true,
+      "learn_residual": false,
+      "lam_g": 10.0,
+      "lam_b": 10.0,
+      "lam_r": 10.0,
+      "alpha": 1.0
+    },
+    {
+      "name": "scales_bias_lambda100_alpha0",
+      "temperature_only": false,
+      "anchor": true,
+      "learn_scales": true,
+      "learn_bias": true,
+      "learn_residual": false,
+      "lam_g": 100.0,
+      "lam_b": 100.0,
+      "lam_r": 100.0,
+      "alpha": 0.0
+    },
+    {
+      "name": "scales_bias_lambda100_alpha1",
+      "temperature_only": false,
+      "anchor": true,
+      "learn_scales": true,
+      "learn_bias": true,
+      "learn_residual": false,
+      "lam_g": 100.0,
+      "lam_b": 100.0,
+      "lam_r": 100.0,
+      "alpha": 1.0
+    },
+    {
+      "name": "full_lambda10_alpha0",
+      "temperature_only": false,
+      "anchor": true,
+      "learn_scales": true,
+      "learn_bias": true,
+      "learn_residual": true,
+      "lam_g": 10.0,
+      "lam_b": 10.0,
+      "lam_r": 10.0,
+      "alpha": 0.0
+    },
+    {
+      "name": "full_lambda10_alpha1",
+      "temperature_only": false,
+      "anchor": true,
+      "learn_scales": true,
+      "learn_bias": true,
+      "learn_residual": true,
+      "lam_g": 10.0,
+      "lam_b": 10.0,
+      "lam_r": 10.0,
+      "alpha": 1.0
+    },
+    {
+      "name": "full_lambda100_alpha0",
+      "temperature_only": false,
+      "anchor": true,
+      "learn_scales": true,
+      "learn_bias": true,
+      "learn_residual": true,
+      "lam_g": 100.0,
+      "lam_b": 100.0,
+      "lam_r": 100.0,
+      "alpha": 0.0
+    },
+    {
+      "name": "full_lambda100_alpha1",
+      "temperature_only": false,
+      "anchor": true,
+      "learn_scales": true,
+      "learn_bias": true,
+      "learn_residual": true,
+      "lam_g": 100.0,
+      "lam_b": 100.0,
+      "lam_r": 100.0,
+      "alpha": 1.0
+    }
+  ],
+  "selected_configuration": {
+    "alpha": 1.0,
+    "anchor": true,
+    "lam_b": 10.0,
+    "lam_g": 10.0,
+    "lam_r": 10.0,
+    "learn_bias": true,
+    "learn_residual": false,
+    "learn_scales": true,
+    "name": "scales_bias_lambda10_alpha1",
+    "temperature_only": false
+  },
+  "eligibility": {
+    "deployed_development_accuracy_drop_max": 0.005,
+    "deployed_ece_excess_over_temperature_max": 0.0,
+    "deployed_hce_excess_over_temperature_max": 0.0,
+    "iteration_limit_hits": "Flag for convergence review; do not select until resolved",
+    "nonfinite_fits": "Ineligible; retain failure record",
+    "numerical_comparison_tolerance": 1e-07,
+    "reserve_accuracy_drop_max": 0.005
+  },
+  "selection_rule": {
+    "fallback": "Temperature only if it passes reserve and deployed accuracy guards; otherwise record no eligible configuration",
+    "objective": "Lowest deployed development R3",
+    "scope": "Per candidate",
+    "tie_break": [
+      "Fewer fitted parameters",
+      "Smaller alpha",
+      "Larger shrinkage lambda",
+      "Configuration name"
+    ]
+  },
+  "selection_condition": {
+    "fitting_seed": 42,
+    "reserve_seed": 42,
+    "selection_seed": 42,
+    "selector": "random"
+  },
+  "data": {
+    "split": "reliability_calibration/cifar100_experiment_split_seed42.json",
+    "selection_pool": 5000,
+    "reserve_samples": 500,
+    "reserve_seed": 42,
+    "fitting_samples": 1500,
+    "total_label_budget": 2000,
+    "reserve_excluded_from_fitting": true,
+    "development_samples": 5000,
+    "ptq_samples": 500,
+    "split_sha256": "8523c6561e05289e23d99d370287238c55fb164b97eaa74884fe58a9101fd0d4"
+  },
+  "input_exports": [
+    {
+      "selection_seed": 1,
+      "path": "artifacts/calibration_inputs/mobilenet_v2_cifar100_trial_26/random/seed_1.npz",
+      "sha256": "847d3024988e8ab86298dc9a9e5636287fa95c543d4316035be82cd0ec0f12c3"
+    },
+    {
+      "selection_seed": 2,
+      "path": "artifacts/calibration_inputs/mobilenet_v2_cifar100_trial_26/random/seed_2.npz",
+      "sha256": "b18f04ddb372cda8969c2676d84c39dc70ccc6bd98c9edf9f297e8a212be6ff5"
+    },
+    {
+      "selection_seed": 3,
+      "path": "artifacts/calibration_inputs/mobilenet_v2_cifar100_trial_26/random/seed_3.npz",
+      "sha256": "eed7017f2f533585d2b28d4616d800233b102ed9c85cbbd60bcc9462dc3ecbb0"
+    },
+    {
+      "selection_seed": 4,
+      "path": "artifacts/calibration_inputs/mobilenet_v2_cifar100_trial_26/random/seed_4.npz",
+      "sha256": "a10d46a7dfc5cf9cc4f80d01d67a70c621d0e8db12408a224379bfcc84c1e2e3"
+    },
+    {
+      "selection_seed": 5,
+      "path": "artifacts/calibration_inputs/mobilenet_v2_cifar100_trial_26/random/seed_5.npz",
+      "sha256": "1feec591b2a394608ac5444c9835d3218c11315b1dc1c36eb7d723bf347c568b"
+    },
+    {
+      "selection_seed": 6,
+      "path": "artifacts/calibration_inputs/mobilenet_v2_cifar100_trial_26/random/seed_6.npz",
+      "sha256": "da7d76bcdec7e1855cf788501e62d00e4c3fda5e01ed41b72796a6a25f3d5d93"
+    },
+    {
+      "selection_seed": 7,
+      "path": "artifacts/calibration_inputs/mobilenet_v2_cifar100_trial_26/random/seed_7.npz",
+      "sha256": "d49c629f5fd981f851c98ed51022b659af3885296cb556bcc3a0951761c64e68"
+    },
+    {
+      "selection_seed": 8,
+      "path": "artifacts/calibration_inputs/mobilenet_v2_cifar100_trial_26/random/seed_8.npz",
+      "sha256": "a2b896876013dc12e39d1e4e95293746004b3d3447cad255f495ccc909f71d81"
+    },
+    {
+      "selection_seed": 9,
+      "path": "artifacts/calibration_inputs/mobilenet_v2_cifar100_trial_26/random/seed_9.npz",
+      "sha256": "9ac2222fdd4195e3b3cdf7c2a309fc7a112d6ef6b49bb1665caee9920d630608"
+    },
+    {
+      "selection_seed": 10,
+      "path": "artifacts/calibration_inputs/mobilenet_v2_cifar100_trial_26/random/seed_10.npz",
+      "sha256": "15949ab660b884b7ee35c06f6d3f80dc81bdf9820a16318c5b8f9e098fa9a575"
+    },
+    {
+      "selection_seed": 42,
+      "path": "artifacts/calibration_inputs/mobilenet_v2_cifar100_trial_26/random/seed_42.npz",
+      "sha256": "c194728a3e021a45ce73c9f2532d5ae89e138ae6a349db6004fbbe1b62a21346"
+    }
+  ],
+  "source_snapshots": {
+    "protocol": {
+      "path": "reliability_calibration/outputs/ta_cgsrh_v2/cifar100_architecture_extension/protocol.json",
+      "sha256": "9b309d42cd350470c72533fcbba39fb5574181e3bffbb79b1609ff79cdfdf51b"
+    },
+    "development_plan": {
+      "path": "reliability_calibration/outputs/ta_cgsrh_v2/cifar100_architecture_extension/development_run_plan.json",
+      "sha256": "6f1621f009e59518dbf6ad9203961bbf797ed31f44703c1dcab3033887d33db9"
+    },
+    "selected_settings": {
+      "path": "reliability_calibration/outputs/ta_cgsrh_v2/cifar100_architecture_extension/selected_settings.json",
+      "sha256": "c9b99c80e02037f120d0cc9233a34f8cb369f70889888d1da57637fb1abb0056"
+    },
+    "export_manifest": {
+      "path": "reliability_calibration/outputs/ta_cgsrh_v2/cifar100_architecture_extension/exports/manifest.json",
+      "sha256": "9ef3246bf6c3b5f29fc0291e369068991f6f48df0465229f5bf9cdc4b598147c"
+    }
+  },
+  "provenance_note": "Derived from historical records; not a new preregistration. Source paths are relative to this settings file. Original protocols and experiment outputs remain unchanged."
+}

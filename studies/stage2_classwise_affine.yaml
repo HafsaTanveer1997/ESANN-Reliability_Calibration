@@ -1,0 +1,104 @@
+# Stage 2 classwise-affine search for a fixed trained classifier.
+# Recovered from the earlier Optuna tuning study that preceded the final TA repeat plans.
+# Set the output directory and Optuna storage when launching the study.
+
+study_name: STAGE2_CLASSWISE_AFFINE
+training_verbosity: 1
+
+generator: simple_product
+trials: 30
+baseline_trials: 1
+optuna_seed: 42
+calibration_seed: 42
+
+# Keep the trained classifier fixed and fit only the calibrator.
+epochs: 0
+fine_tune_epochs: 0
+
+prepare_datasets: prepare_stage2_data
+# Score fitted calibrators on 450 inner-validation examples.
+# The split seed keeps the same partition across trials.
+stage2_inner_validation_size: 450
+stage2_inner_split_seed: 42
+
+# Rank fitted calibrators by minimizing the inner-validation reliability risk.
+# Give NLL, Brier score, ECE, and high-confidence error a weight of 0.25 each.
+# Apply a penalty of 1000 if top-1 accuracy drops by more than 0.5 percentage points.
+objectives:
+  - objective_reliability_risk
+
+directions:
+  - minimize
+
+sort_by: objective_reliability_risk
+
+metrics:
+  - best_training_loss
+  - gamma_min
+  - gamma_max
+  - gamma_mean
+  - beta_min
+  - beta_max
+  - beta_mean
+  - inner_baseline_top1
+  - inner_calibrated_top1
+  - inner_accuracy_drop
+  - inner_accuracy_guard_passed
+  - inner_baseline_nll
+  - inner_calibrated_nll
+  - inner_baseline_brier
+  - inner_calibrated_brier
+  - inner_baseline_ece
+  - inner_calibrated_ece
+  - inner_baseline_high_confidence_error
+  - inner_calibrated_high_confidence_error
+  - inner_baseline_reliability_risk
+  - inner_calibrated_reliability_risk
+  - inner_reliability_risk_improvement
+  - objective_reliability_risk
+
+# Optuna tunes the learning rate, iteration limit, and separate regularization
+# strengths for the per-class scales (gamma) and biases (beta).
+gen_params:
+  learning_rate:
+    - float
+    - min: 0.0001
+      max: 0.1
+      log: true
+      baseline: 0.01
+
+  max_iterations:
+    - categorical
+    - [100, 200, 400]
+
+  gamma_regularization:
+    - float
+    - min: 0.000001
+      max: 0.1
+      log: true
+      baseline: 0.001
+
+  beta_regularization:
+    - float
+    - min: 0.000001
+      max: 0.1
+      log: true
+      baseline: 0.001
+
+# Fit each affine calibrator with a 50/50 NLL-Brier loss plus gamma and beta penalties.
+# Rank the fitted calibrators using the four-term inner-validation risk above.
+fixed_params:
+  calibration_method: classwise_affine
+
+  fit_nll_weight: 0.50
+  fit_brier_weight: 0.50
+
+  num_ece_bins: 15
+  confidence_threshold: 0.60
+  maximum_allowed_accuracy_drop: 0.005
+  accuracy_guard_penalty: 1000.0
+
+  nll_weight: 0.25
+  brier_weight: 0.25
+  ece_weight: 0.25
+  high_confidence_error_weight: 0.25

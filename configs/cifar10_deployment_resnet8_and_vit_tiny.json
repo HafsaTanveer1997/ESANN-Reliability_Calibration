@@ -1,0 +1,1078 @@
+{
+  "split": "reliability_calibration/cifar10_experiment_split_seed42.json",
+  "split_sha256": "7fb06012f9adc0c4595ff9baea2d37f7df417cbb8893e0e9c2e8b4e355c3a836",
+  "source_sha256": {
+    "protocol": "23a909a0cc116cdce8f104e0666d0f063ddb5b583c8d8eeb35139517c0f33917",
+    "development_run_plan": "dde5f32921c479c83dd4ddfab6a4b80d7db46393263540ec425dbd3fe2ebb330",
+    "repeated_run_plan": "d1c1904970dac71a9545168e28d7f1e44ac5c8c4fe4c05637adc57ddc7feecde",
+    "selected_settings": "e3ca1a690de003717a825db25a3a200c8222c35946dadb2588c52e6e37729f05"
+  },
+  "correction_settings": {
+    "anchor": true,
+    "hinge": "hard",
+    "k": 2,
+    "lam_b": 10.0,
+    "lam_g": 10.0,
+    "lam_r": 10.0,
+    "learn_scales": true,
+    "link_mode": "hard",
+    "max_iter": 2000,
+    "min_support": 1.0,
+    "tau": 0.6
+  },
+  "development": [
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 42,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_42.npz",
+      "development_export_sha256": "412254158d9fba4fa282969f8127e77794e1008fa27b8f3a0e7c9a4df47ba1ac",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      }
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 42,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_42.npz",
+      "development_export_sha256": "412254158d9fba4fa282969f8127e77794e1008fa27b8f3a0e7c9a4df47ba1ac",
+      "configuration": {
+        "name": "scales_bias_lambda10_alpha0",
+        "temperature_only": false,
+        "anchor": true,
+        "learn_scales": true,
+        "learn_bias": true,
+        "learn_residual": false,
+        "lam_g": 10.0,
+        "lam_b": 10.0,
+        "lam_r": 10.0,
+        "alpha": 0.0
+      }
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 42,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_42.npz",
+      "development_export_sha256": "412254158d9fba4fa282969f8127e77794e1008fa27b8f3a0e7c9a4df47ba1ac",
+      "configuration": {
+        "name": "scales_bias_lambda10_alpha1",
+        "temperature_only": false,
+        "anchor": true,
+        "learn_scales": true,
+        "learn_bias": true,
+        "learn_residual": false,
+        "lam_g": 10.0,
+        "lam_b": 10.0,
+        "lam_r": 10.0,
+        "alpha": 1.0
+      }
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 42,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_42.npz",
+      "development_export_sha256": "412254158d9fba4fa282969f8127e77794e1008fa27b8f3a0e7c9a4df47ba1ac",
+      "configuration": {
+        "name": "scales_bias_lambda100_alpha0",
+        "temperature_only": false,
+        "anchor": true,
+        "learn_scales": true,
+        "learn_bias": true,
+        "learn_residual": false,
+        "lam_g": 100.0,
+        "lam_b": 100.0,
+        "lam_r": 100.0,
+        "alpha": 0.0
+      }
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 42,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_42.npz",
+      "development_export_sha256": "412254158d9fba4fa282969f8127e77794e1008fa27b8f3a0e7c9a4df47ba1ac",
+      "configuration": {
+        "name": "scales_bias_lambda100_alpha1",
+        "temperature_only": false,
+        "anchor": true,
+        "learn_scales": true,
+        "learn_bias": true,
+        "learn_residual": false,
+        "lam_g": 100.0,
+        "lam_b": 100.0,
+        "lam_r": 100.0,
+        "alpha": 1.0
+      }
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 42,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_42.npz",
+      "development_export_sha256": "412254158d9fba4fa282969f8127e77794e1008fa27b8f3a0e7c9a4df47ba1ac",
+      "configuration": {
+        "name": "full_lambda10_alpha0",
+        "temperature_only": false,
+        "anchor": true,
+        "learn_scales": true,
+        "learn_bias": true,
+        "learn_residual": true,
+        "lam_g": 10.0,
+        "lam_b": 10.0,
+        "lam_r": 10.0,
+        "alpha": 0.0
+      }
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 42,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_42.npz",
+      "development_export_sha256": "412254158d9fba4fa282969f8127e77794e1008fa27b8f3a0e7c9a4df47ba1ac",
+      "configuration": {
+        "name": "full_lambda10_alpha1",
+        "temperature_only": false,
+        "anchor": true,
+        "learn_scales": true,
+        "learn_bias": true,
+        "learn_residual": true,
+        "lam_g": 10.0,
+        "lam_b": 10.0,
+        "lam_r": 10.0,
+        "alpha": 1.0
+      }
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 42,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_42.npz",
+      "development_export_sha256": "412254158d9fba4fa282969f8127e77794e1008fa27b8f3a0e7c9a4df47ba1ac",
+      "configuration": {
+        "name": "full_lambda100_alpha0",
+        "temperature_only": false,
+        "anchor": true,
+        "learn_scales": true,
+        "learn_bias": true,
+        "learn_residual": true,
+        "lam_g": 100.0,
+        "lam_b": 100.0,
+        "lam_r": 100.0,
+        "alpha": 0.0
+      }
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 42,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_42.npz",
+      "development_export_sha256": "412254158d9fba4fa282969f8127e77794e1008fa27b8f3a0e7c9a4df47ba1ac",
+      "configuration": {
+        "name": "full_lambda100_alpha1",
+        "temperature_only": false,
+        "anchor": true,
+        "learn_scales": true,
+        "learn_bias": true,
+        "learn_residual": true,
+        "lam_g": 100.0,
+        "lam_b": 100.0,
+        "lam_r": 100.0,
+        "alpha": 1.0
+      }
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 42,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_42.npz",
+      "development_export_sha256": "d9b642dba9ee40049512bb7dcbda034a7c6cec3fca92e2d8419046df6884799b",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      }
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 42,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_42.npz",
+      "development_export_sha256": "d9b642dba9ee40049512bb7dcbda034a7c6cec3fca92e2d8419046df6884799b",
+      "configuration": {
+        "name": "scales_bias_lambda10_alpha0",
+        "temperature_only": false,
+        "anchor": true,
+        "learn_scales": true,
+        "learn_bias": true,
+        "learn_residual": false,
+        "lam_g": 10.0,
+        "lam_b": 10.0,
+        "lam_r": 10.0,
+        "alpha": 0.0
+      }
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 42,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_42.npz",
+      "development_export_sha256": "d9b642dba9ee40049512bb7dcbda034a7c6cec3fca92e2d8419046df6884799b",
+      "configuration": {
+        "name": "scales_bias_lambda10_alpha1",
+        "temperature_only": false,
+        "anchor": true,
+        "learn_scales": true,
+        "learn_bias": true,
+        "learn_residual": false,
+        "lam_g": 10.0,
+        "lam_b": 10.0,
+        "lam_r": 10.0,
+        "alpha": 1.0
+      }
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 42,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_42.npz",
+      "development_export_sha256": "d9b642dba9ee40049512bb7dcbda034a7c6cec3fca92e2d8419046df6884799b",
+      "configuration": {
+        "name": "scales_bias_lambda100_alpha0",
+        "temperature_only": false,
+        "anchor": true,
+        "learn_scales": true,
+        "learn_bias": true,
+        "learn_residual": false,
+        "lam_g": 100.0,
+        "lam_b": 100.0,
+        "lam_r": 100.0,
+        "alpha": 0.0
+      }
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 42,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_42.npz",
+      "development_export_sha256": "d9b642dba9ee40049512bb7dcbda034a7c6cec3fca92e2d8419046df6884799b",
+      "configuration": {
+        "name": "scales_bias_lambda100_alpha1",
+        "temperature_only": false,
+        "anchor": true,
+        "learn_scales": true,
+        "learn_bias": true,
+        "learn_residual": false,
+        "lam_g": 100.0,
+        "lam_b": 100.0,
+        "lam_r": 100.0,
+        "alpha": 1.0
+      }
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 42,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_42.npz",
+      "development_export_sha256": "d9b642dba9ee40049512bb7dcbda034a7c6cec3fca92e2d8419046df6884799b",
+      "configuration": {
+        "name": "full_lambda10_alpha0",
+        "temperature_only": false,
+        "anchor": true,
+        "learn_scales": true,
+        "learn_bias": true,
+        "learn_residual": true,
+        "lam_g": 10.0,
+        "lam_b": 10.0,
+        "lam_r": 10.0,
+        "alpha": 0.0
+      }
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 42,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_42.npz",
+      "development_export_sha256": "d9b642dba9ee40049512bb7dcbda034a7c6cec3fca92e2d8419046df6884799b",
+      "configuration": {
+        "name": "full_lambda10_alpha1",
+        "temperature_only": false,
+        "anchor": true,
+        "learn_scales": true,
+        "learn_bias": true,
+        "learn_residual": true,
+        "lam_g": 10.0,
+        "lam_b": 10.0,
+        "lam_r": 10.0,
+        "alpha": 1.0
+      }
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 42,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_42.npz",
+      "development_export_sha256": "d9b642dba9ee40049512bb7dcbda034a7c6cec3fca92e2d8419046df6884799b",
+      "configuration": {
+        "name": "full_lambda100_alpha0",
+        "temperature_only": false,
+        "anchor": true,
+        "learn_scales": true,
+        "learn_bias": true,
+        "learn_residual": true,
+        "lam_g": 100.0,
+        "lam_b": 100.0,
+        "lam_r": 100.0,
+        "alpha": 0.0
+      }
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 42,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_42.npz",
+      "development_export_sha256": "d9b642dba9ee40049512bb7dcbda034a7c6cec3fca92e2d8419046df6884799b",
+      "configuration": {
+        "name": "full_lambda100_alpha1",
+        "temperature_only": false,
+        "anchor": true,
+        "learn_scales": true,
+        "learn_bias": true,
+        "learn_residual": true,
+        "lam_g": 100.0,
+        "lam_b": 100.0,
+        "lam_r": 100.0,
+        "alpha": 1.0
+      }
+    }
+  ],
+  "repeat": [
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 1,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_1.npz",
+      "development_export_sha256": "8bedfb808ef6018f75af7aca1982a09f6edc2ed4a666afebeb9a67a3e9f5b148",
+      "configuration": {
+        "alpha": 0.0,
+        "anchor": true,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": true,
+        "learn_scales": true,
+        "name": "full_lambda10_alpha0",
+        "temperature_only": false
+      },
+      "analysis_roles": [
+        "frozen_selected"
+      ]
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 1,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_1.npz",
+      "development_export_sha256": "8bedfb808ef6018f75af7aca1982a09f6edc2ed4a666afebeb9a67a3e9f5b148",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "analysis_roles": [
+        "temperature_baseline"
+      ]
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 2,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_2.npz",
+      "development_export_sha256": "06d9c22fdb7059597674e92ff47b8a6e86ed24a2599101b6e8573d23789d5a0a",
+      "configuration": {
+        "alpha": 0.0,
+        "anchor": true,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": true,
+        "learn_scales": true,
+        "name": "full_lambda10_alpha0",
+        "temperature_only": false
+      },
+      "analysis_roles": [
+        "frozen_selected"
+      ]
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 2,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_2.npz",
+      "development_export_sha256": "06d9c22fdb7059597674e92ff47b8a6e86ed24a2599101b6e8573d23789d5a0a",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "analysis_roles": [
+        "temperature_baseline"
+      ]
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 3,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_3.npz",
+      "development_export_sha256": "d6ab05916342f1ae3d4678e07c62c91cfe35c81adbed81550794afa1e55bd400",
+      "configuration": {
+        "alpha": 0.0,
+        "anchor": true,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": true,
+        "learn_scales": true,
+        "name": "full_lambda10_alpha0",
+        "temperature_only": false
+      },
+      "analysis_roles": [
+        "frozen_selected"
+      ]
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 3,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_3.npz",
+      "development_export_sha256": "d6ab05916342f1ae3d4678e07c62c91cfe35c81adbed81550794afa1e55bd400",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "analysis_roles": [
+        "temperature_baseline"
+      ]
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 4,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_4.npz",
+      "development_export_sha256": "0ae34be02b871e46e0bf3fb63c190b5bc8a8fabdfbe70da47288a87f660c3626",
+      "configuration": {
+        "alpha": 0.0,
+        "anchor": true,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": true,
+        "learn_scales": true,
+        "name": "full_lambda10_alpha0",
+        "temperature_only": false
+      },
+      "analysis_roles": [
+        "frozen_selected"
+      ]
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 4,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_4.npz",
+      "development_export_sha256": "0ae34be02b871e46e0bf3fb63c190b5bc8a8fabdfbe70da47288a87f660c3626",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "analysis_roles": [
+        "temperature_baseline"
+      ]
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 5,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_5.npz",
+      "development_export_sha256": "9837149f3089a88465f7db597de50499ff451b5c1afa3f3f0ade9e1a7c034598",
+      "configuration": {
+        "alpha": 0.0,
+        "anchor": true,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": true,
+        "learn_scales": true,
+        "name": "full_lambda10_alpha0",
+        "temperature_only": false
+      },
+      "analysis_roles": [
+        "frozen_selected"
+      ]
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 5,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_5.npz",
+      "development_export_sha256": "9837149f3089a88465f7db597de50499ff451b5c1afa3f3f0ade9e1a7c034598",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "analysis_roles": [
+        "temperature_baseline"
+      ]
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 6,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_6.npz",
+      "development_export_sha256": "6eb73e225a4b05e61f6414060f5c4cfd63a52bb6ba2c072ac26c65d0198843f2",
+      "configuration": {
+        "alpha": 0.0,
+        "anchor": true,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": true,
+        "learn_scales": true,
+        "name": "full_lambda10_alpha0",
+        "temperature_only": false
+      },
+      "analysis_roles": [
+        "frozen_selected"
+      ]
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 6,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_6.npz",
+      "development_export_sha256": "6eb73e225a4b05e61f6414060f5c4cfd63a52bb6ba2c072ac26c65d0198843f2",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "analysis_roles": [
+        "temperature_baseline"
+      ]
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 7,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_7.npz",
+      "development_export_sha256": "76ed048673325bb4d627883e7997d3e13d3e11e8f5e90f79db66de37cb97c424",
+      "configuration": {
+        "alpha": 0.0,
+        "anchor": true,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": true,
+        "learn_scales": true,
+        "name": "full_lambda10_alpha0",
+        "temperature_only": false
+      },
+      "analysis_roles": [
+        "frozen_selected"
+      ]
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 7,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_7.npz",
+      "development_export_sha256": "76ed048673325bb4d627883e7997d3e13d3e11e8f5e90f79db66de37cb97c424",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "analysis_roles": [
+        "temperature_baseline"
+      ]
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 8,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_8.npz",
+      "development_export_sha256": "603c8857895caaf2644df7af84b86f1666270b8b8e494a72a41b1b096f935705",
+      "configuration": {
+        "alpha": 0.0,
+        "anchor": true,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": true,
+        "learn_scales": true,
+        "name": "full_lambda10_alpha0",
+        "temperature_only": false
+      },
+      "analysis_roles": [
+        "frozen_selected"
+      ]
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 8,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_8.npz",
+      "development_export_sha256": "603c8857895caaf2644df7af84b86f1666270b8b8e494a72a41b1b096f935705",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "analysis_roles": [
+        "temperature_baseline"
+      ]
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 9,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_9.npz",
+      "development_export_sha256": "87d38e1c0be3380f000af12e0375e586b811249b306fa5bbf5dec2547296c3a7",
+      "configuration": {
+        "alpha": 0.0,
+        "anchor": true,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": true,
+        "learn_scales": true,
+        "name": "full_lambda10_alpha0",
+        "temperature_only": false
+      },
+      "analysis_roles": [
+        "frozen_selected"
+      ]
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 9,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_9.npz",
+      "development_export_sha256": "87d38e1c0be3380f000af12e0375e586b811249b306fa5bbf5dec2547296c3a7",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "analysis_roles": [
+        "temperature_baseline"
+      ]
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 10,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_10.npz",
+      "development_export_sha256": "5c970eafad44485b48c5bf81feb16df3615744fa4de2452a51ba994b002c516f",
+      "configuration": {
+        "alpha": 0.0,
+        "anchor": true,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": true,
+        "learn_scales": true,
+        "name": "full_lambda10_alpha0",
+        "temperature_only": false
+      },
+      "analysis_roles": [
+        "frozen_selected"
+      ]
+    },
+    {
+      "candidate_id": "resnet8_trial_33",
+      "selector": "random",
+      "selection_seed": 10,
+      "development_export": "artifacts/calibration_inputs/resnet8_trial_33/random/seed_10.npz",
+      "development_export_sha256": "5c970eafad44485b48c5bf81feb16df3615744fa4de2452a51ba994b002c516f",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "analysis_roles": [
+        "temperature_baseline"
+      ]
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 1,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_1.npz",
+      "development_export_sha256": "60b2e99d08852b012d8cac7c46e038a0e768b770959c2111a91a213dbf3dcbe5",
+      "configuration": {
+        "alpha": 1.0,
+        "anchor": true,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": false,
+        "learn_scales": true,
+        "name": "scales_bias_lambda10_alpha1",
+        "temperature_only": false
+      },
+      "analysis_roles": [
+        "frozen_selected"
+      ]
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 1,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_1.npz",
+      "development_export_sha256": "60b2e99d08852b012d8cac7c46e038a0e768b770959c2111a91a213dbf3dcbe5",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "analysis_roles": [
+        "temperature_baseline"
+      ]
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 2,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_2.npz",
+      "development_export_sha256": "3c28ed3950f3f6034d93ef9f7e7f2c3d63e706b72dcf688b0c808ce1bbbc6a0a",
+      "configuration": {
+        "alpha": 1.0,
+        "anchor": true,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": false,
+        "learn_scales": true,
+        "name": "scales_bias_lambda10_alpha1",
+        "temperature_only": false
+      },
+      "analysis_roles": [
+        "frozen_selected"
+      ]
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 2,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_2.npz",
+      "development_export_sha256": "3c28ed3950f3f6034d93ef9f7e7f2c3d63e706b72dcf688b0c808ce1bbbc6a0a",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "analysis_roles": [
+        "temperature_baseline"
+      ]
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 3,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_3.npz",
+      "development_export_sha256": "e84818e4e3a6197306e8d135e255da9cced435f7c99dd282032f33ead82196a1",
+      "configuration": {
+        "alpha": 1.0,
+        "anchor": true,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": false,
+        "learn_scales": true,
+        "name": "scales_bias_lambda10_alpha1",
+        "temperature_only": false
+      },
+      "analysis_roles": [
+        "frozen_selected"
+      ]
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 3,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_3.npz",
+      "development_export_sha256": "e84818e4e3a6197306e8d135e255da9cced435f7c99dd282032f33ead82196a1",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "analysis_roles": [
+        "temperature_baseline"
+      ]
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 4,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_4.npz",
+      "development_export_sha256": "0283252d2be26d3f1e703fd3e1938d99615f4dd9c0dfa4946c129c9c66a843f0",
+      "configuration": {
+        "alpha": 1.0,
+        "anchor": true,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": false,
+        "learn_scales": true,
+        "name": "scales_bias_lambda10_alpha1",
+        "temperature_only": false
+      },
+      "analysis_roles": [
+        "frozen_selected"
+      ]
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 4,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_4.npz",
+      "development_export_sha256": "0283252d2be26d3f1e703fd3e1938d99615f4dd9c0dfa4946c129c9c66a843f0",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "analysis_roles": [
+        "temperature_baseline"
+      ]
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 5,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_5.npz",
+      "development_export_sha256": "119a2941673b098ddeee88d519d61de3db693078c81563ecb6ccd4036a1daed3",
+      "configuration": {
+        "alpha": 1.0,
+        "anchor": true,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": false,
+        "learn_scales": true,
+        "name": "scales_bias_lambda10_alpha1",
+        "temperature_only": false
+      },
+      "analysis_roles": [
+        "frozen_selected"
+      ]
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 5,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_5.npz",
+      "development_export_sha256": "119a2941673b098ddeee88d519d61de3db693078c81563ecb6ccd4036a1daed3",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "analysis_roles": [
+        "temperature_baseline"
+      ]
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 6,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_6.npz",
+      "development_export_sha256": "b690f3627a2e853cedf9c79e75fac051d869a7fb79214aadc392517c2aae4330",
+      "configuration": {
+        "alpha": 1.0,
+        "anchor": true,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": false,
+        "learn_scales": true,
+        "name": "scales_bias_lambda10_alpha1",
+        "temperature_only": false
+      },
+      "analysis_roles": [
+        "frozen_selected"
+      ]
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 6,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_6.npz",
+      "development_export_sha256": "b690f3627a2e853cedf9c79e75fac051d869a7fb79214aadc392517c2aae4330",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "analysis_roles": [
+        "temperature_baseline"
+      ]
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 7,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_7.npz",
+      "development_export_sha256": "e70e35cb39d40131949136462c10027015a5dca26fd8465ace41233cb714142d",
+      "configuration": {
+        "alpha": 1.0,
+        "anchor": true,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": false,
+        "learn_scales": true,
+        "name": "scales_bias_lambda10_alpha1",
+        "temperature_only": false
+      },
+      "analysis_roles": [
+        "frozen_selected"
+      ]
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 7,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_7.npz",
+      "development_export_sha256": "e70e35cb39d40131949136462c10027015a5dca26fd8465ace41233cb714142d",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "analysis_roles": [
+        "temperature_baseline"
+      ]
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 8,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_8.npz",
+      "development_export_sha256": "d49567738cdc6ae3687db446d989ef4d4c03dc7e20e90caf49a0e24ef366a91a",
+      "configuration": {
+        "alpha": 1.0,
+        "anchor": true,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": false,
+        "learn_scales": true,
+        "name": "scales_bias_lambda10_alpha1",
+        "temperature_only": false
+      },
+      "analysis_roles": [
+        "frozen_selected"
+      ]
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 8,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_8.npz",
+      "development_export_sha256": "d49567738cdc6ae3687db446d989ef4d4c03dc7e20e90caf49a0e24ef366a91a",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "analysis_roles": [
+        "temperature_baseline"
+      ]
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 9,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_9.npz",
+      "development_export_sha256": "eb854e2357170edd0180712332b8f4146ad55077bc72457866e0174c84e150e8",
+      "configuration": {
+        "alpha": 1.0,
+        "anchor": true,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": false,
+        "learn_scales": true,
+        "name": "scales_bias_lambda10_alpha1",
+        "temperature_only": false
+      },
+      "analysis_roles": [
+        "frozen_selected"
+      ]
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 9,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_9.npz",
+      "development_export_sha256": "eb854e2357170edd0180712332b8f4146ad55077bc72457866e0174c84e150e8",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "analysis_roles": [
+        "temperature_baseline"
+      ]
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 10,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_10.npz",
+      "development_export_sha256": "8de28a16d95ac7d5809b93cd7884272d049cd347956d1a955119e46507f2e022",
+      "configuration": {
+        "alpha": 1.0,
+        "anchor": true,
+        "lam_b": 10.0,
+        "lam_g": 10.0,
+        "lam_r": 10.0,
+        "learn_bias": true,
+        "learn_residual": false,
+        "learn_scales": true,
+        "name": "scales_bias_lambda10_alpha1",
+        "temperature_only": false
+      },
+      "analysis_roles": [
+        "frozen_selected"
+      ]
+    },
+    {
+      "candidate_id": "vit_tiny_cifar10_trial_4",
+      "selector": "random",
+      "selection_seed": 10,
+      "development_export": "artifacts/calibration_inputs/vit_tiny_cifar10_trial_4/random/seed_10.npz",
+      "development_export_sha256": "8de28a16d95ac7d5809b93cd7884272d049cd347956d1a955119e46507f2e022",
+      "configuration": {
+        "name": "temperature",
+        "temperature_only": true
+      },
+      "analysis_roles": [
+        "temperature_baseline"
+      ]
+    }
+  ],
+  "accuracy_drop_limit": 0.005,
+  "classifier_paths": {
+    "resnet8_trial_33": "fc",
+    "vit_tiny_cifar10_trial_4": "head"
+  }
+}

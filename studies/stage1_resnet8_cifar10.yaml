@@ -1,0 +1,55 @@
+# Stage 1 model search for ResNet-8 on CIFAR-10.
+# Recovered from the saved final Optuna run.
+# Set the output directory and Optuna storage when launching the study.
+
+baseline_trials: 5
+comment: Stage-1 PyTorch ResNet8 CIFAR-10 training and PT2E PTQ search
+directions:
+- maximize
+- minimize
+epochs: 35
+fine_tune_epochs: 0
+fixed_params:
+  batch_size: 96
+  regularizer: l1_l2
+# Optuna searches the learning rate and the L1 and L2 regularization strengths.
+gen_params:
+  l1:
+  - float
+  - baseline: 1.0e-06
+    log: true
+    max: 5.0e-05
+    min: 1.0e-07
+  l2:
+  - float
+  - baseline: 0.0001
+    log: true
+    max: 0.001
+    min: 1.0e-05
+  learning_rate:
+  - float
+  - baseline: 0.001
+    log: true
+    max: 0.005
+    min: 0.001
+generator: simple_product
+metrics:
+- loss
+- categorical_accuracy
+- precision
+- recall
+- deployed_accuracy
+- rg_compressed_size
+- zs_compressed_size
+model: image_classification_torch
+model_type: mlperf_tiny/torch/image_classification
+# Each trial trains a candidate and evaluates its deployed INT8 model.
+# Maximize deployed_accuracy and minimize rg_compressed_size.
+# Record zs_compressed_size as an additional metric.
+objectives:
+- deployed_accuracy
+- rg_compressed_size
+prepare_datasets: prepare_cifar10_datasets
+study_name: STAGE1_RESNET8_CIFAR10_PTQ_FINAL
+training_verbosity: 1
+trials: 60

@@ -1,0 +1,67 @@
+# Stage 1 model search for ViT-Tiny on CIFAR-10.
+# From the tracked launcher. The final run's effective settings were not recovered.
+# Set the output directory and Optuna storage when launching the study.
+
+study_name: STAGE1_VIT_CIFAR10_PTQ_FINAL
+training_verbosity: 1
+
+generator: simple_product
+model: image_classification_torch
+comment: "Stage-1 PyTorch ViT CIFAR-10 search: deployed INT8 accuracy and compressed model size"
+
+trials: 60
+baseline_trials: 5
+epochs: 35
+fine_tune_epochs: 0
+qat_bits: 8
+
+prepare_datasets: prepare_cifar10_datasets
+
+# Each trial trains a candidate and evaluates its deployed INT8 model.
+# Maximize deployed_accuracy and minimize rg_compressed_size.
+# Record zs_compressed_size as an additional metric.
+objectives:
+  - deployed_accuracy
+  - rg_compressed_size
+
+directions:
+  - maximize
+  - minimize
+
+metrics:
+  - loss
+  - categorical_accuracy
+  - precision
+  - recall
+  - deployed_accuracy
+  - rg_compressed_size
+  - zs_compressed_size
+
+# Optuna searches the learning rate and the L1 and L2 regularization strengths.
+gen_params:
+  learning_rate:
+    - float
+    - min: 0.001
+      max: 0.005
+      log: true
+      baseline: 0.001
+
+  l2:
+    - float
+    - min: 0.00001
+      max: 0.001
+      log: true
+      baseline: 0.0001
+
+  l1:
+    - float
+    - min: 0.0000001
+      max: 0.00005
+      log: true
+      baseline: 0.000001
+
+fixed_params:
+  batch_size: 96
+  regularizer: l1_l2
+
+model_type: mlperf_tiny/torch/image_classification

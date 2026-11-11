@@ -1,0 +1,57 @@
+# Stage 1 model search for ResNet-32 on CIFAR-100.
+# From the configuration referenced by the 60-trial launcher.
+# Set the output directory and Optuna storage when launching the study.
+
+baseline_trials: 1
+comment: ResNet-32 CIFAR-100 deployed accuracy and packed-size search
+directions:
+- maximize
+- minimize
+epochs: 150
+fine_tune_epochs: 0
+fixed_params:
+  batch_size: 96
+  regularizer: l1_l2
+# Optuna searches the learning rate and the L1 and L2 regularization strengths.
+gen_params:
+  l1:
+  - float
+  - baseline: 1.0e-06
+    log: true
+    max: 5.0e-05
+    min: 1.0e-08
+  l2:
+  - float
+  - baseline: 0.0001
+    log: true
+    max: 0.001
+    min: 1.0e-06
+  learning_rate:
+  - float
+  - baseline: 0.001
+    log: true
+    max: 0.005
+    min: 0.001
+generator: simple_product
+metrics:
+- loss
+- categorical_accuracy
+- precision
+- recall
+- deployed_accuracy
+- rg_compressed_size
+- zs_compressed_size
+model: image_classification_torch
+model_type: mlperf_tiny/torch/image_classification
+# Each trial trains a candidate and evaluates its deployed INT8 model.
+# Maximize deployed_accuracy and minimize rg_compressed_size.
+# Record zs_compressed_size as an additional metric.
+objectives:
+- deployed_accuracy
+- rg_compressed_size
+prepare_datasets: prepare_cifar100_datasets
+study_name: STAGE1_RESNET32_CIFAR100_SEARCH60
+training_verbosity: 1
+trials: 60
+optuna_seed: 42
+training_seed: 42
